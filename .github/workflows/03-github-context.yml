@@ -16,3 +16,14 @@ jobs:
           echo "event_name: ${{ github.event_name }}"
           echo "run_id: ${{ github.run_id }}"
           echo "run_number: ${{ github.run_number }}"
+
+      - name: runner context
+        run: |
+          echo "runner.os: ${{ runner.os }}"
+          echo "runner.arch: ${{ runner.arch }}"
+          echo "runner.temp: ${{ runner.temp }}"
+
+      - name: github context 전체 JSON
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
