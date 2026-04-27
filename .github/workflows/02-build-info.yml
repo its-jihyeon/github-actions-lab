@@ -34,4 +34,3 @@ jobs:
           echo "Version: $VERSION"
           echo "Environment: $BUILD_ENV"
           echo "=== 끝 ==="
-          
