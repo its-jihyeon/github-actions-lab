@@ -1,5 +1,5 @@
 name: Time Check
-run-name: "시간 확인 - {github.actor 표현식 사용}"  
+run-name: "시간 확인 - ${github.actor 표현식 사용}"  
 on:
   workflow_dispatch
 
