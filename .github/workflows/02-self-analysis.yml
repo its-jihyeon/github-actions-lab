@@ -1,7 +1,7 @@
 name: Repository Self-Analysis
 on:
   workflow_dispatch
-  
+
 jobs:
   analyze:
     runs-on: ubuntu-latest
@@ -12,9 +12,9 @@ jobs:
           ls -al
 
       - name: 리포지토리 체크아웃 (기본 경로)
-        uses: actions/checkout@v4 
+        uses: actions/checkout@v4
 
-      - name: 체크아웃 후 디렉토리 확인
+      - name: 체크아웃 후 디렉토리 확인최종 빌드 정보
         run: |
           pwd
           ls -al
