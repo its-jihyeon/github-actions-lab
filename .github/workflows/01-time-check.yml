@@ -1,0 +1,17 @@
+name: Time Check
+run-name: "시간 확인 - {github.actor 표현식 사용}"  
+on:
+  workflow_dispatch
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: show-time
+        run: |
+          echo "=== 시간 정보 ==="
+          echo "UTC: $(date -u)"
+          echo "KST: $(TZ='Asia/Seoul' date)"
+          echo "Unix Timestamp: $(date +%s)"
+          echo "요일: $(date +%A)"
+          echo "=== 끝 ==="
