@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 메타데이터 생성
+        id: meta
         run: |
           SHORT_SHA=$(echo "${{ github.sha }}" | cut -c1-7)
           BUILD_ID="build-${{ github.run_number }}-$SHORT_SHA"
