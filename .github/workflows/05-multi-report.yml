@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: 디렉토리 생성
         run: |
-          mkdir reports/unit/
+          mkdir -p reports/unit/
           echo "단위 테스트 통과 5/5" > result.txt
           echo "실행 번호: ${{ github.run_number }}" >> result.txt
 
@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: 디렉토리 생성
         run: |
-          mkdir reports/integration/
+          mkdir -p reports/integration/
           echo "통합 테스트 통과 3/3" > result.txt
           echo "실행 번호: ${{ github.run_number }}" >> result.txt
 
