@@ -1,0 +1,19 @@
+name: Conditional Deploy
+on:
+  workflow_dispatch:
+    inputs:
+      description: '사용자 이름'
+      required: true
+      default: 'staging'
+      type: choice
+      options:
+        - staging
+        - production
+        - both
+
+jobs: 
+  prepare:
+    runs-on: ubuntu-latest
+    
+
+    
