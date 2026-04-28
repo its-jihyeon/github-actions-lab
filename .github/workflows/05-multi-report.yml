@@ -9,8 +9,8 @@ jobs:
       - name: 디렉토리 생성
         run: |
           mkdir -p reports/unit/
-          echo "단위 테스트 통과 5/5" > result.txt
-          echo "실행 번호: ${{ github.run_number }}" >> result.txt
+          echo "단위 테스트 통과 5/5" > reports/unit/result.txt
+          echo "실행 번호: ${{ github.run_number }}" >> reports/unit/result.txt
 
       - name: Artifact 업로드
         uses: actions/upload-artifact@v4
@@ -25,8 +25,8 @@ jobs:
       - name: 디렉토리 생성
         run: |
           mkdir -p reports/integration/
-          echo "통합 테스트 통과 3/3" > result.txt
-          echo "실행 번호: ${{ github.run_number }}" >> result.txt
+          echo "통합 테스트 통과 3/3" > reports/integration/result.txt
+          echo "실행 번호: ${{ github.run_number }}" >> reports/integration/result.txt
 
       - name: Artifact 업로드
         uses: actions/upload-artifact@v4
